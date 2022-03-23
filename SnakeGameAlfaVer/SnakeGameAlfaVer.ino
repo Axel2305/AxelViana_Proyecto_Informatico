@@ -1,24 +1,4 @@
-#include <MD_MAX72xx.h>
-#include <SPI.h>
 
-//Pines
-const int pinXJ = A0;
-const int pinYJ = A1;
-const int DIN;
-const int CS;
-const int CLK;
-const int button;
-const int buzzer;
-
-//Variables
-const int anchoP = 32;
-const int altoP = 8;
-int sPosX, sPosY, cPosX, cPosY;
-int puntos = 0;
-int tamanioSnake = 2;
-String direccion;
-int colaX[300], colaY[300];
-bool isGameOver = false;
 MD_MAX72XX mx = MD_MAX72XX(MD_MAX72XX::GENERIC_HW, DIN, CLK, CS, 4);
 
 void setup(){
